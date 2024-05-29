@@ -11,6 +11,11 @@ def calculate_profit():
     You can assume the user will enter only numeric characters, e.g. "3000", not "$3,000.00"
     The output should match the format of the following examples: "Profit: $690.00" for sales of $3,000, or "Profit: $2,300.00" for sales of $10,000, etc.
     """
+    total_sale=float(input("What is your estimated total sales？"))
+    rate= 0.23
+    profit=(total_sale * rate)
+    answer=f'"Profit:{profit}" for sales of {total_sale}.'
+    print(answer)
 
 
 def calculate_quotient_and_remainder():
@@ -22,6 +27,12 @@ def calculate_quotient_and_remainder():
       Enter number #2: 2
       2 goes into 5 a total of 2 times with a remainder of 1
     """
+    first_number=int(input("first number (please to put a integer)"))
+    second_number=int(input("second number (please to put a integer)"))
+    float= (first_number % second_number)
+    times=int(first_number / second_number)
+    answer=f"{second_number} goes into {first_number} a total of {times} times with a remainder of {float}."
+    print(answer)
 
 
 def calculate_miles_per_gallon():
@@ -35,6 +46,11 @@ def calculate_miles_per_gallon():
       Gas used (gallons): 25
       Miles per gallon: 2.2
     """
+    miles=float(input("Miles driven: "))
+    gas=float(input("Gas used (gallons):"))
+    mpg=(miles/gas)
+    answer=f"Miles per gallon: {mpg}"
+    print(answer)
 
 
 def align_text():
@@ -53,3 +69,11 @@ def align_text():
       Price #2: $   10.00
       Price #3: $ 9532.60
     """
+    price1= float(input("Enter the first price "))
+    price2= float(input("Enter the second price "))
+    price3= float(input("Enter the third price "))
+    answer1= "{:.2f}".format(price1)
+    answer2= "{:.2f}".format(price2)
+    answer3= "{:.2f}".format(price3)
+    message=f"Here are your prices!\n Price #1 :$ {answer1}\n Price #2:$ {answer2}\n Price #3:$ {answer3}"
+    print(message)
